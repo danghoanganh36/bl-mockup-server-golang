@@ -1,5 +1,9 @@
 {
-    "build": "go build -o app",
-    "start": "./app"
-}
+    "build": {
+      "cmd": "go build -o app"
+    },
+    "start": {
+      "cmd": "./app"
+    }
+  }
   
