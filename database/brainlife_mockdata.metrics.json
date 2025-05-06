@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "6716598d67495b4d4e20aa01"
+  },
+  "name": "Relaxation",
+  "description": "Relaxation is a state of mind and body that reduces stress and anxiety, making you feel comfortable and at ease. In this state, the body reduces alertness and muscle tension, calms the nervous system, and improves blood circulation. Relaxation can be achieved through many methods such as deep breathing, meditation, yoga, or listening to soothing music.\n\nThere are three main factors that contribute to the state of relaxation:\n1. Reduced physical tension: Muscles and body systems relax, heart rate and blood pressure decrease.\n2. Mental stability: Thoughts slow down, anxiety decreases and focus on the present is enhanced.\n3. Improved mood: Relaxation helps reduce mental tension, increasing feelings of comfort and happiness.\n\nIt is not only good for mental health but also helps improve physical health, support the immune system and improve sleep quality.",
+  "blogs": [
+    {
+      "$oid": "6716572567495b4d4e20a9ff"
+    }
+  ]
+}]

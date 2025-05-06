@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "66fe474b3257559db29ec90f"
+  },
+  "name": "Technology"
+},
+{
+  "_id": {
+    "$oid": "66fe474b3257559db29ec910"
+  },
+  "name": "Health"
+},
+{
+  "_id": {
+    "$oid": "66fe474b3257559db29ec911"
+  },
+  "name": "Sience"
+},
+{
+  "_id": {
+    "$oid": "66fe474b3257559db29ec912"
+  },
+  "name": "Business"
+},
+{
+  "_id": {
+    "$oid": "66fe474b3257559db29ec913"
+  },
+  "name": "Entertainment"
+},
+{
+  "_id": {
+    "$oid": "66fe474b3257559db29ec914"
+  },
+  "name": "Advertising"
+},
+{
+  "_id": {
+    "$oid": "6716543367495b4d4e20a9f8"
+  },
+  "name": "Relaxation"
+},
+{
+  "_id": {
+    "$oid": "6716545667495b4d4e20a9f9"
+  },
+  "name": "Concentration"
+},
+{
+  "_id": {
+    "$oid": "6716546e67495b4d4e20a9fa"
+  },
+  "name": "Mental Fatigue"
+},
+{
+  "_id": {
+    "$oid": "6716549b67495b4d4e20a9fb"
+  },
+  "name": "Stressfulness"
+}]

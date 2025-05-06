@@ -1,0 +1,60 @@
+# Environment variables and secrets
+.env
+*.pem
+*.key
+credentials.json
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bl-mockup-server-golang
+/bin/
+
+# Go specific
+*.test
+*.out
+/vendor/
+go.work
+go.work.sum
+
+# Temporary database files
+*.db
+*.sqlite
+/tmp/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Log files
+*.log
+/logs/
+npm-debug.log*
+
+# Generated documentation
+/docs/generated/
+
+# Docker volumes and data
+docker-volumes/
+postgres-data/
+
+# Temporary files
+/tmp/
+.tmp/
