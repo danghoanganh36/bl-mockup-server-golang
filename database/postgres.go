@@ -2,10 +2,11 @@ package database
 
 import (
 	"fmt"
+	"log"
+	"os"
+
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
-	"os"
-	"bl-mockup-server-golang/models"
 )
 
 var DB *gorm.DB
@@ -19,14 +20,12 @@ func ConnectDB() {
 		os.Getenv("PGDATABASE"),
 		os.Getenv("PGPORT"),
 	)
-	
 
-	database, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
+	var err error
+	DB, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
-		panic("failed to connect database")
+		log.Fatalf("❌ Failed to connect database: %v", err)
 	}
 
-	DB = database
-
-	DB.AutoMigrate(&models.Blog{}, &models.Category{}, &models.Metric{})
+	log.Println("✅ Connected to PostgreSQL!")
 }
