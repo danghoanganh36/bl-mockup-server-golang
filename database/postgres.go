@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 	"os"
-
+	"bl-mockup-server-golang/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -28,4 +28,10 @@ func ConnectDB() {
 	}
 
 	log.Println("✅ Connected to PostgreSQL!")
+
+	err = DB.AutoMigrate(&models.Metric{}, &models.Category{}, &models.Blog{})
+	if err != nil {
+		log.Fatalf("❌ Failed to migrate database: %v", err)
+	}
+	log.Println("✅ Database migrated successfully!")
 }
