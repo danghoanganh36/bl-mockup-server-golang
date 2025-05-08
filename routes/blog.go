@@ -1,22 +1,22 @@
 package routes
 
 import (
-	"bl-mockup-server-golang/models"
 	"bl-mockup-server-golang/database"
+	"bl-mockup-server-golang/models"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
 
 func RegisterBlogRoutes(router *gin.Engine) {
-	r := router.Group("/api/blogs")
+	blogs := router.Group("/api/blogs")
 	{
-		r.GET("/", func(c *gin.Context) {
+		blogs.GET("/", func(c *gin.Context) {
 			var blogs []models.Blog
 			database.DB.Preload("Category").Find(&blogs)
 			c.JSON(http.StatusOK, blogs)
 		})
 
-		r.POST("/", func(c *gin.Context) {
+		blogs.POST("/", func(c *gin.Context) {
 			var blog models.Blog
 			if err := c.ShouldBindJSON(&blog); err != nil {
 				c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
@@ -24,6 +24,15 @@ func RegisterBlogRoutes(router *gin.Engine) {
 			}
 			database.DB.Create(&blog)
 			c.JSON(http.StatusCreated, blog)
+		})
+	}
+
+	categories := router.Group("/api/categories")
+	{
+		categories.GET("/", func(c *gin.Context) {
+			var categories []models.Category
+			database.DB.Find(&categories)
+			c.JSON(http.StatusOK, categories)
 		})
 	}
 }
